@@ -895,3 +895,22 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* Cursor Spotlight Effect */
+.cursor-spotlight {
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle at center,
+        rgba(0, 243, 255, 0.15) 0%,
+        rgba(0, 243, 255, 0.05) 30%,
+        transparent 70%
+    );
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    transition: opacity 0.2s ease;
+    mix-blend-mode: screen;
+}

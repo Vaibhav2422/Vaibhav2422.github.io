@@ -1,3 +1,23 @@
+// Create cursor spotlight element
+const cursorSpotlight = document.createElement('div');
+cursorSpotlight.className = 'cursor-spotlight';
+document.body.appendChild(cursorSpotlight);
+
+// Track cursor movement
+document.addEventListener('mousemove', (e) => {
+    cursorSpotlight.style.left = e.clientX + 'px';
+    cursorSpotlight.style.top = e.clientY + 'px';
+});
+
+// Hide cursor spotlight when leaving window
+document.addEventListener('mouseleave', () => {
+    cursorSpotlight.style.opacity = '0';
+});
+
+document.addEventListener('mouseenter', () => {
+    cursorSpotlight.style.opacity = '1';
+});
+
 // Mobile Navigation Toggle
 const mobileMenu = document.getElementById('mobile-menu');
 const navMenu = document.querySelector('.nav-menu');
